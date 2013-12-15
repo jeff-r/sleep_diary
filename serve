@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export DEVISE_SECRET_KEY=`bundle exec rake secret`
+
+bundle exec rails s
