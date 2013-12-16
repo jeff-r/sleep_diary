@@ -13,10 +13,10 @@
   <tbody>
     <% @diary_entries.each do |diary_entry| %>
       <tr>
-        <td class="well"><%= diary_entry.wakeup_date %></td>
+        <td class="well"><%= link_to diary_entry.wakeup_date, diary_entry %></td>
         <td class="well"><%= diary_entry.sleep_duration_in_hours_as_string %></td>
         <td class="well"><%= diary_entry.rating %></td>
-        <td class="well"><%= link_to 'Show', diary_entry %> |
+        <td class="well">
         <%= link_to 'Edit', edit_diary_entry_path(diary_entry) %> |
         <%= link_to 'Destroy', diary_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
