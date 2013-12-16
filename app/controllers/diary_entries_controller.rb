@@ -5,7 +5,7 @@ class DiaryEntriesController < ApplicationController
   # GET /diary_entries
   # GET /diary_entries.json
   def index
-    @diary_entries = current_user.diary_entries.order(:wakeup).to_a
+    @diary_entries = current_user.diary_entries.order(:wakeup).reverse_order.to_a
   end
 
   # GET /diary_entries/1
