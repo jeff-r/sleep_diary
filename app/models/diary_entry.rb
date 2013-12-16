@@ -5,6 +5,17 @@ class DiaryEntry < ActiveRecord::Base
     datetime.strftime("%Y-%m-%d %H:%M")
   end
 
+  def sleep_duration_in_hours_as_string
+    hours = sleep_duration_in_hours
+    "%.2f" % (hours)
+  end
+
+  def sleep_duration_in_hours
+    duration_in_seconds = wakeup - lights_out
+    duration_in_seconds -= awake_duration*60 if awake_duration
+    duration_in_hours = duration_in_seconds / 3600
+  end
+
   def wakeup_date
     if wakeup.nil?
       ""

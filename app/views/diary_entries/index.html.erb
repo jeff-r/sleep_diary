@@ -4,12 +4,8 @@
   <thead>
     <tr>
       <th>Date</th>
-      <th>Lights out</th>
-      <th>Wakeup</th>
-      <th>Notes</th>
+      <th>Hours</th>
       <th>Rating</th>
-      <th></th>
-      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -18,9 +14,7 @@
     <% @diary_entries.each do |diary_entry| %>
       <tr>
         <td class="well"><%= diary_entry.wakeup_date %></td>
-        <td class="well"><%= diary_entry.lights_out_time %></td>
-        <td class="well"><%= diary_entry.wakeup_time %></td>
-        <td class="well"><%= diary_entry.notes %></td>
+        <td class="well"><%= diary_entry.sleep_duration_in_hours_as_string %></td>
         <td class="well"><%= diary_entry.rating %></td>
         <td class="well"><%= link_to 'Show', diary_entry %> |
         <%= link_to 'Edit', edit_diary_entry_path(diary_entry) %> |

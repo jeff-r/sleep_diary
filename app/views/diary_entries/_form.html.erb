@@ -25,10 +25,14 @@
     <%= f.label :wakeup %><br>
     <%= f.text_field :wakeup_formatted, :class => "lights_out_picker" %>
   </div>
+  <div class="field">
+    <%= f.label "Minutes awake" %><br>
+    <%= f.text_field :awake_duration %>
+  </div>
 
   <div class="field">
     <%= f.label :notes %><br>
-    <%= f.text_area :notes %>
+    <%= f.text_area :notes, :rows => "10" %>
   </div>
   <div class="field">
     <%= f.label :rating %><br>
