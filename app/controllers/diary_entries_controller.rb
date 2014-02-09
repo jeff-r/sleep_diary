@@ -11,6 +11,7 @@ class DiaryEntriesController < ApplicationController
   # GET /diary_entries/1
   # GET /diary_entries/1.json
   def show
+    @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => true)
     @diary_entry = DiaryEntry.find(params[:id])
     raise "Diary entry doesn't belong to the current user" unless @diary_entry.user_id == current_user.id
   end
