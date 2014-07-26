@@ -1,4 +1,4 @@
-# sleep-diary is just that -- a sleep log.
+sleep-diary is just that -- a sleep log.
 
 It's a simple Rails app.
 
