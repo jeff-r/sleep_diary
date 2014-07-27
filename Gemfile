@@ -9,6 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'devise'
 gem 'redcarpet'
+gem 'capistrano-bundler'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -29,9 +30,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'sqlite3'
+  gem 'capistrano-rails', '~> 1.1.1'
 end
 
-# For Heroku
 group :production do
   gem 'pg'
   gem 'rails_12factor'
