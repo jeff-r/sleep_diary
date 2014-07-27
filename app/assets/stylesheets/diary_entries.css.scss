@@ -1,3 +1,24 @@
 // Place all the styles related to the diary_entries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.main-content {
+  background-color: #eee;
+  border-color: #999;
+  border-radius:5px;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.cell {
+  display: inline;
+  background-color: #fff;
+}
+
+#rating .cell {
+  font-weight: bold;
+}
+
+.heading {
+  display: inline;
+  background-color: #ddd;
+}

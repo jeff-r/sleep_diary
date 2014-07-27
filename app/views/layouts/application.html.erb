@@ -35,38 +35,39 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 
     <%= javascript_include_tag "application" %>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
   </head>
   <body>
 
   <% if user_signed_in? %>
-    <div class="navbar navbar-fluid-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/">Sleep</a>
-          <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "New entry", new_diary_entry_path  %></li>
-              <li><%= link_to "All entries", diary_entries_path  %></li>
-              <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+          </button>
+          <ul class="nav navbar-nav">
+            <li><%= link_to "New entry", new_diary_entry_path  %></li>
+            <li><%= link_to "All entries", diary_entries_path  %></li>
+            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+          </ul>
         </div>
       </div>
-    </div>
+    </nav>
+
   <% end %>
 
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span9">
-          <%= bootstrap_flash %>
+    <div class="container main-content">
           <%= yield %>
-        </div>
-      </div><!--/row-->
 
     </div> <!-- /container -->
 
