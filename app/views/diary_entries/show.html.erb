@@ -1,6 +1,16 @@
 <div id="notice"><%= notice %></div>
 
 <div id="rating" class="row">
+  <div class='col-xs-11'>
+    <%= link_to 'Prev', @diary_entry.prev %> |
+    <%= link_to 'Next', @diary_entry.next %>
+  </div>
+  <div class='col-xs-1'>
+    <%= link_to 'Edit', edit_diary_entry_path(@diary_entry) %>
+  </div>
+</div>
+
+<div id="rating" class="row">
   <div class='col-xs-2  heading'>Rating:</div>
   <div class='col-xs-10 cell'><%= @diary_entry.rating %></div>
 </div>
@@ -30,8 +40,3 @@
   <div class='col-xs-10 cell'> <%= @markdown.render(@diary_entry.notes).html_safe %></div>
 </div>
 
-<%= link_to 'Prev', @diary_entry.prev %> |
-<%= link_to 'Next', @diary_entry.next %> |
-
-<%= link_to 'Edit', edit_diary_entry_path(@diary_entry) %> |
-<%= link_to 'All entries', diary_entries_path %>
