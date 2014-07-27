@@ -1,6 +1,14 @@
 class DiaryEntry < ActiveRecord::Base
   belongs_to :user
 
+  def next
+    self.class.unscoped.where('id > ?', id).first
+  end
+
+  def prev
+    self.class.unscoped.where('id < ?', id).first
+  end
+
   def date_and_time_format(datetime)
     datetime.strftime("%Y-%m-%d %H:%M")
   end
