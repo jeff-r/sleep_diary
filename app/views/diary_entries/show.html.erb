@@ -35,8 +35,10 @@
   <div class='col-xs-10 cell'> <%= @diary_entry.awake_duration %> minutes</div>
 </div>
 
+<% if @diary_entry.notes && !@diary_entry.notes.empty? %>
 <div id="notes" class="row">
   <div class='col-xs-2  heading'><p>Notes:</p></div>
   <div class='col-xs-10 cell'> <%= @markdown.render(@diary_entry.notes).html_safe %></div>
 </div>
+<% end %>
 
