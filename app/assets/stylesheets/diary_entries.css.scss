@@ -18,7 +18,15 @@
   font-weight: bold;
 }
 
+#notes.row {
+  background-color: #ddd;
+}
+
 .heading {
   display: inline;
   background-color: #ddd;
+}
+
+.row #notice {
+  background-color: #ded;
 }
