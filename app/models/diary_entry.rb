@@ -6,7 +6,7 @@ class DiaryEntry < ActiveRecord::Base
   end
 
   def prev
-    self.class.unscoped.where('id < ?', id).first
+    self.class.unscoped.where('id < ?', id).last
   end
 
   def date_and_time_format(datetime)

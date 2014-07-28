@@ -8,11 +8,6 @@ role :app, %w{ocean_deployer}
 role :web, %w{ocean_deployer}
 role :db,  %w{ocean_deployer}
 
-# role :app, %w{curlydogsystems.com}
-# role :web, %w{curlydogsystems.com}
-# role :db,  %w{curlydogsystems.com}
-
-
 # Extended Server Syntax
 # ======================
 # This can be used to drop a more detailed server definition into the
