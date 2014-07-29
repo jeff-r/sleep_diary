@@ -76,7 +76,7 @@ class DiaryEntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def diary_entry_params
-      params.require(:diary_entry).permit(:lights_out, :wakeup, :notes, :rating, :lights_out_formatted, :wakeup_formatted, :awake_duration)
+      params.require(:diary_entry).permit(:lights_out, :wakeup, :notes, :rating, :lights_out_formatted, :wakeup_formatted, :awake_duration, :times_awake)
     end
 
     def date_and_time_format(datetime)

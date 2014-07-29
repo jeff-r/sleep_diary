@@ -25,6 +25,13 @@
   <div class='col-xs-10 cell'> <%= @diary_entry.lights_out_formatted %> </div>
 </div>
 
+<% if @diary_entry.times_awake %>
+  <div id="times_awoke" class="row">
+    <div class='col-xs-2  heading'>Times awake:</div>
+    <div class='col-xs-10 cell'> <%= @diary_entry.times_awake %></div>
+  </div>
+<% end %>
+
 <div id="woke_up" class="row">
   <div class='col-xs-2  heading'>Woke up:</div>
   <div class='col-xs-10 cell'> <%= @diary_entry.wakeup_formatted %></div>

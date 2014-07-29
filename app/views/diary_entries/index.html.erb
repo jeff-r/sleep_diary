@@ -1,7 +1,8 @@
 <p> Daily logs </p>
 
 <div class="row">
-  <div class="col-xs-3">Date</div>
+  <div class="col-xs-3 col-md-2">Date</div>
+  <div class='col-xs-1'>Woke</div>
   <div class='col-xs-1'>Hours</div>
   <div class='col-xs-1'>Rating</div>
   <div class='col-xs-2'></div>
@@ -9,7 +10,8 @@
 
 <% @diary_entries.each do |diary_entry| %>
   <div class="row">
-    <div class="col-xs-3"><%= link_to diary_entry.wakeup_date, diary_entry %></div>
+    <div class="col-xs-3 col-md-2"><%= link_to diary_entry.wakeup_date, diary_entry %></div>
+    <div class='col-xs-1'><%= diary_entry.times_awake %></div>
     <div class='col-xs-1'><%= diary_entry.sleep_duration_in_hours_as_string %></div>
     <div class='col-xs-1'><%= diary_entry.rating %></div>
     <div class='col-xs-2'>
