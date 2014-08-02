@@ -1,6 +1,18 @@
-<p class='title'><%= @diary_entry.wakeup_date %></p>
+<div class="row titlerow">
+  <div class="col-xs-12 col-md-12">
+  <p class='title'><%= short_date(@diary_entry.wakeup) %></p>
+  </div>
+</div>
+
+<p></p>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @diary_entry %> |
-<%= link_to 'All entries', diary_entries_path %>
+<p></p>
+
+<div class="row footerrow">
+  <div class="col-xs-12 col-md-12">
+    <%= link_to 'Show', @diary_entry %> |
+    <%= link_to 'All entries', diary_entries_path %>
+  </div>
+</div>
