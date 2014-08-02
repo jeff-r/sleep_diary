@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def day_only(date)
-    date.strftime("%A")
+    date.strftime("%a")
   end
 
   def date_only(date)

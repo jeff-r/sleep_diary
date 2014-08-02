@@ -4,9 +4,21 @@
 .main-content {
   background-color: #eee;
   border-color: #999;
-  border-radius:5px;
+  // border-radius:5px;
   border-width: 1px;
   border-style: solid;
+  a:link {
+    color: #2A6373;
+  }
+  a:visited {
+    color: #2A6373;
+  }
+  a:hover {
+    color: #2A6373;
+  }
+  a:active {
+    color: #2A6373;
+  }
 }
 
 .title {
@@ -16,6 +28,29 @@
 .cell {
   display: inline;
   background-color: #fff;
+}
+
+.titlerow {
+  // background-color: #ddd;
+  background-color: #DD8702;
+  background-color: #DD9F0A;
+}
+
+.footerrow {
+  background-color: #2A6373;
+  background-color: #122A33;
+  a:link {
+    color: #DD9F0A;
+  }
+  a:visited {
+    color: #DD9F0A;
+  }
+  a:hover {
+    color: #DD9F0A;
+  }
+  a:active {
+    color: #DD9F0A;
+  }
 }
 
 #rating .cell {
@@ -28,7 +63,7 @@
 
 .heading {
   display: inline;
-  background-color: #ddd;
+  background-color: #eee;
 }
 
 .row #notice {

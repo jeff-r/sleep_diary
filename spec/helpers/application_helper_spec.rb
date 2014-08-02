@@ -29,7 +29,7 @@ describe ApplicationHelper do
   describe "#day_only" do
     it "shows just the day of the week" do
       date = Time.zone.local(2013, 10, 5, 8, 45)
-      expect(helper.day_only(date)).to eql("Saturday")
+      expect(helper.day_only(date)).to eql("Sat")
     end
   end
 
