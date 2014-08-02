@@ -27,16 +27,23 @@ describe ApplicationHelper do
   end
 
   describe "#day_only" do
-    it "formats a time just the day of the week" do
+    it "shows just the day of the week" do
       date = Time.zone.local(2013, 10, 5, 8, 45)
       expect(helper.day_only(date)).to eql("Saturday")
     end
   end
 
   describe "#date_only" do
-    it "formats a time just the date" do
+    it "shows just the date" do
       date = Time.zone.local(2013, 10, 5, 8, 45)
       expect(helper.date_only(date)).to eql("10-05")
+    end
+  end
+
+  describe "#month_only" do
+    it "shows just the month" do
+      date = Time.zone.local(2013, 10, 5, 8, 45)
+      expect(helper.month_only(date)).to eql("October")
     end
   end
 
@@ -54,9 +61,8 @@ describe ApplicationHelper do
     end
 
     it "returns an empty string if it's the same month" do
-      prev_date = OpenStruct.new(wakeup: Time.zone.local(2013, 10, 5, 8, 45))
+      prev_date = OpenStruct.new(wakeup: Time.zone.local(2013, 10, 6, 8, 45))
       expect(helper.month_if_new(today, prev_date)).to eql("")
     end
-
   end
 end

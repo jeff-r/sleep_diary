@@ -15,14 +15,18 @@ module ApplicationHelper
     date.strftime("%m-%d")
   end
 
+  def month_only(date)
+    date.strftime("%B")
+  end
+
   def month_if_new(entry, prev_entry)
-    return entry.wakeup.strftime("%B") if prev_entry.nil?
-    entry_string      = date_only(entry.wakeup)
-    prev_entry_string = date_only(prev_entry.wakeup)
+    return month_only(entry.wakeup) if prev_entry.nil?
+    entry_string      = month_only(entry.wakeup)
+    prev_entry_string = month_only(prev_entry.wakeup)
     if entry_string == prev_entry_string
       ""
     else
-      entry.wakeup.strftime("%B")
+      month_only(entry.wakeup)
     end
   end
 end

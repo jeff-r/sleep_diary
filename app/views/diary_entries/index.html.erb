@@ -1,7 +1,7 @@
 <p> Daily logs </p>
 
 <div class="row">
-  <div class="col-xs-1 col-md-1">Month</div>
+  <div class="col-xs-2 col-md-1">Month</div>
   <div class="col-xs-2 col-md-1">Day</div>
   <div class="col-xs-2 col-md-1">Date</div>
   <div class='col-xs-1'>Woke</div>
@@ -13,7 +13,7 @@
 <% prev_diary_entry = nil %>
 <% @diary_entries.each do |diary_entry| %>
   <div class="row">
-    <div class="col-xs-1 col-md-1"><%= month_if_new(diary_entry, prev_diary_entry) %></div>
+    <div class="col-xs-2 col-md-1"><%= month_if_new(diary_entry, prev_diary_entry) %></div>
     <div class="col-xs-2 col-md-1"><%= link_to day_only(diary_entry.wakeup), diary_entry %></div>
     <div class="col-xs-2 col-md-1"><%= link_to date_only(diary_entry.wakeup), diary_entry %></div>
     <div class='col-xs-1'><%= diary_entry.times_awake %></div>
