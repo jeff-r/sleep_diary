@@ -22,7 +22,7 @@
 
 <div id="lights_out" class="row">
   <div class='col-xs-2  heading'>Lights out:</div>
-  <div class='col-xs-10 cell'> <%= @diary_entry.lights_out_formatted %> </div>
+  <div class='col-xs-10 cell'> <%= short_time(@diary_entry.lights_out) %> </div>
 </div>
 
 <% if @diary_entry.times_awake %>
@@ -34,7 +34,7 @@
 
 <div id="woke_up" class="row">
   <div class='col-xs-2  heading'>Woke up:</div>
-  <div class='col-xs-10 cell'> <%= @diary_entry.wakeup_formatted %></div>
+  <div class='col-xs-10 cell'> <%= short_time(@diary_entry.wakeup) %></div>
 </div>
 
 <div id="awake" class="row">

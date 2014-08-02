@@ -28,7 +28,7 @@ class DiaryEntry < ActiveRecord::Base
     if wakeup.nil?
       ""
     else
-      self.wakeup.strftime("%a %Y-%m-%d")
+      self.wakeup.strftime("%a %m-%d")
     end
   end
 

@@ -25,7 +25,7 @@ describe DiaryEntry do
   describe "#wakeup_date" do
     it "returns a formatted date" do
       entry.wakeup = Time.zone.local(2013, 10, 5, 8, 45)
-      entry.wakeup_date.should == "Sat 2013-10-05"
+      entry.wakeup_date.should == "Sat 10-05"
     end
 
     it "returns an empty string for nil" do
