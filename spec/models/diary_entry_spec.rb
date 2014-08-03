@@ -17,8 +17,9 @@ describe DiaryEntry do
       entry = DiaryEntry.new
       entry.lights_out = Time.zone.local(2013, 10, 5, 23,0)
       entry.wakeup = Time.zone.local(2013, 10, 6, 7, 0)
+      entry.time_to_sleep = 15
       entry.awake_duration = 30
-      entry.sleep_duration_in_hours.should == 7.5
+      entry.sleep_duration_in_hours.should == 7.25
     end
   end
 

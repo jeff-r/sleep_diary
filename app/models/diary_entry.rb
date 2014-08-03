@@ -21,6 +21,7 @@ class DiaryEntry < ActiveRecord::Base
   def sleep_duration_in_hours
     duration_in_seconds = wakeup - lights_out
     duration_in_seconds -= awake_duration*60 if awake_duration
+    duration_in_seconds -= time_to_sleep*60 if time_to_sleep
     duration_in_hours = duration_in_seconds / 3600
   end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140729045124) do
+ActiveRecord::Schema.define(version: 20140803135224) do
 
   create_table "diary_entries", force: true do |t|
     t.datetime "lights_out"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140729045124) do
     t.integer  "user_id"
     t.integer  "awake_duration"
     t.integer  "times_awake"
+    t.integer  "time_to_sleep"
   end
 
   create_table "notes", force: true do |t|
