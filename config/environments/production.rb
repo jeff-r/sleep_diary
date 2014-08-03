@@ -1,6 +1,6 @@
 Sleep::Application.configure do
+  Rails.application.routes.default_url_options[:host] = "curlydogsystems.com/sleep-diary"
   config.relative_url_root = "/sleep-diary"
-  # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
   config.cache_classes = true
