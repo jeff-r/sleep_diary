@@ -1,4 +1,5 @@
 Sleep::Application.configure do
+  config.relative_url_root = "/sleep-diary"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
