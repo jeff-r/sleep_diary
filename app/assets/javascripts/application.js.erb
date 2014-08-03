@@ -12,5 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.hotkeys
 //= require turbolinks
 //= require_tree .
+
+$(document).bind('keydown', 'ctrl+n', function(){
+  window.location.href = "<%= environment.context_class.instance_eval { include Rails.application.routes.url_helpers }; new_diary_entry_path %>";
+});
+
+$(document).bind('keydown', 'ctrl+a', function(){
+  window.location.href = "<%= environment.context_class.instance_eval { include Rails.application.routes.url_helpers }; diary_entries_path %>";
+});
