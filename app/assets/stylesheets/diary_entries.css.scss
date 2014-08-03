@@ -1,8 +1,15 @@
 // Place all the styles related to the diary_entries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$content_background: #FFF6ED;
+$label_background: #BAD2D9;
+$label_background: #CAE3EB;
+$label_background: #49666E;
+$titlerow_background: #995F27;
+
 .main-content {
-  background-color: #eee;
+  background-color: $content_background;
   border-color: #999;
   // border-radius:5px;
   border-width: 1px;
@@ -29,13 +36,33 @@
 .cell {
   display: inline;
   background-color: #fff;
+  background-color: $content_background;
 }
 
-.titlerow {
+$titlerow_color: #eee;
+$titlerow_color: #FFF6ED;
+
+.titlerow, div.titlerow {
   // background-color: #ddd;
   background-color: #DD8702;
   background-color: #DD9F0A;
   background-color: #B2671D;
+  background-color: $titlerow_background;
+  color: FFF6ED;
+  color: $titlerow_color;
+
+  a:link {
+    color: $titlerow_color;
+  }
+  a:visited {
+    color: $titlerow_color;
+  }
+  a:hover {
+    color: $titlerow_color;
+  }
+  a:active {
+    color: $titlerow_color;
+  }
 }
 
 .footerrow {
@@ -59,19 +86,24 @@
 
 #rating .cell {
   font-weight: bold;
+  background-color: $content_background;
 }
 
 #notes.row {
   background-color: #ddd;
+  background-color: $content_background;
 }
 
 .heading {
   display: inline;
   background-color: #eee;
+  background-color: $label_background;
+  color: $titlerow_color;
 }
 
 .row #notice {
   background-color: #ded;
+  background-color: $content_background;
 }
 
 
