@@ -1,6 +1,14 @@
 class DiaryEntry < ActiveRecord::Base
   belongs_to :user
 
+  def running_average(nights)
+    entries = DiaryEntry.where("lights_out < '#{self.lights_out}'").order(:lights_out).limit(nights)
+    return sleep_duration_in_hours_as_string if entries.count == 0
+    hours = entries.inject(0) { |sum, entry| sum + entry.sleep_duration_in_hours }
+    hours = hours / entries.count
+    "%.2f" % (hours)
+  end
+
   def next
     self.class.unscoped.where('id > ?', id).first
   end

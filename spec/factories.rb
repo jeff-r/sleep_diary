@@ -8,7 +8,7 @@ FactoryGirl.define do
 
   factory :diary_entry do
     lights_out DateTime.yesterday
-    waketime   DateTime.now
+    wakeup   DateTime.now
     notes "some notes"
     rating 5
     association :user
